@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>INDOOR NAVIGATION MAP</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/pin.jpg" />
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/index.css" rel="stylesheet">
+  
+
+</head>
+
+<body>
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+        <h1  class="masthead-heading mb-0">INDOOR NAVIGATION</h1>
+        <h2 class="masthead-subheading mb-0">Mobile Map</h2>
+        <div class="btn btn-primary btn-xl rounded-pill mt-5"> 
+          <div >
+     <input class= "city"  id="city" type="text"  name="city" list="cityname" placeholder="Type the city name" onchange="display()"  >
+            
+               <datalist id="cityname" bg-color="grey" >
+            <select id="select" >
+                      <option  >Chennai</option>
+                      <option >Coimbatore</option>
+                        <option >Trichy</option>
+                        <option>Madurai</option>
+                        <option>Dindugal</option>
+                </select> 
+            </datalist>
+        </div>
+      </div>
+      </div>
+
+  </header>
+    <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript">
+  
+      
+         function display() {
+            var val = document.getElementById("city").value;
+            if (val=='Madurai')
+            {
+              location.replace('madurai.html');
+            }
+          
+          else if(val=='Coimbatore')
+          {
+            location.replace('https://en.wikipedia.org/wiki/Coimbatore');
+          }
+          else
+          {
+            display="none";
+          }
+         }
+    
+ </script>
+</body>
+
+</html>
